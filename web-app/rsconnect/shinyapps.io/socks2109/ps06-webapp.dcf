@@ -1,0 +1,13 @@
+name: ps06-webapp
+title: ps06-webapp
+username:
+account: socks2109
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 8475049
+bundleId: 6914827
+url: https://socks2109.shinyapps.io/ps06-webapp/
+when: 1677914334.936
+lastSyncTime: 1677914334.93601
+asMultiple: FALSE
+asStatic: FALSE

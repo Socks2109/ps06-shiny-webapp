@@ -19,7 +19,7 @@ ui <- fluidPage(
              tabPanel("Intro",
                       h2("Introduction"),
                       p("This dataset was retrieved from USGS. It contains the earthquake data over the past 30 days in the conterminous U.S. (Note that the Conterminous U.S. refers to a rectangular region including the lower 48 states and surrounding areas which are outside the Conterminous U.S.). An image of the conterminous U.S is shown below:"),
-                      img(src = "https://d9-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/thumbnails/image/usmap_0.jpg", height = 200),
+                      img(alt = "Image of conterminous US", src = "https://d9-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/thumbnails/image/usmap_0.jpg", height = 200),
                       br(),
                       p("The dataset contains ", nrow(earthquake), " number of rows, and ", ncol(earthquake), " number of columns in this dataset. Some of the aforementioned columns are:"),
                       tags$ul(
@@ -32,7 +32,7 @@ ui <- fluidPage(
                       h2("Magnitude v.s Depth"),
                       sidebarLayout(
                         sidebarPanel(
-                          p("This graph illustrates the relationship between the earthquake's magnitude and depth with the option to choose the magType of the data points."),
+                          p("This graph illustrates the relationship between the earthquake's", strong("magnitude"), "and", strong("depth"), "with the option to choose the magType of the data points."),
                           sliderInput("min",
                                       "Change the minimum magnitude",
                                       min = 2.5,
@@ -61,7 +61,7 @@ ui <- fluidPage(
                       h2("Depth and magnitude errors"),
                       sidebarLayout(
                         sidebarPanel(
-                          p("This table shows the user's desired maximum depth and magnitude errors that they would allow, and display the latitudes and longitudes of the data that they deem to be within their range for errors."),
+                          p("This table shows the user's desired", strong("maximum depth"), "and", strong("magnitude errors"), "that they would allow, and display the latitudes and longitudes of the data that they deem to be within their range for errors. It also allows them to determine whether the data is significant enough to be considered an earthquake"),
                           br(),
                           sliderInput("dep_err",
                                       "Change the maximum depth error",
